@@ -1,0 +1,40 @@
+dateModified: 1753753271
+email:
+  fromEmail: matthew.c.bloomfield@gmail.com
+  fromName: 'Family Council'
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    7ad1a866-1c8e-4650-9b19-d263e18b343b: Goals # Goals
+    8c87c7ea-1582-42d5-b6d7-9c88e8c8a576: 'Meeting Note' # Meeting Note
+    9b8d2105-e251-407b-a6c3-3c13272f4840: 'Meeting Notes' # Meeting Notes
+    31f03c96-559c-4bdd-8787-ac93092033d4: 'Cooking with Mom' # Cooking with Mom
+    38dbc4fe-cab0-4690-883e-2168152813c7: Appointment # Appointment
+    72d466ab-a6bc-4eba-878a-7f126e8dff24: 'Last Week Review' # Last Week Review
+    164a3134-27de-4b5f-9491-1907525357f6: 'Action Items/Projects' # Action Items/Projects
+    282d4b43-f75f-4f17-bf1d-613818729acf: 'Family Night' # Family Night
+    10812f57-e0ff-4d73-8afe-9b5dd6834bbb: Vacation # Vacation
+    314251bf-385e-4d9b-a0fd-03b552683f96: 'Scheduled Events' # Scheduled Events
+    360126a8-85d8-4ef3-86da-01e0f5296f5d: Date # Date
+    a86c8b0e-38ee-49a4-acc5-79c6cfeb8444: 'Prayer Roll' # Prayer Roll
+    accbaccb-56e5-45c7-834b-e5eb0d801c47: Temple # Temple
+    af39758d-bdf6-4124-8383-9d645b8606da: 'Family Council' # Family Council
+    c7013bca-3e29-4dc6-9e6a-2a4ece2f2f76: Holiday # Holiday
+    d1201e6d-02fe-4944-ae3d-e657ed973bcf: Chores # Chores
+    dae18f9a-3013-4c95-bac0-83d04f8f154e: Date # Date
+    ead71f15-16e6-4aae-b77a-0bd7dc9c28f6: 'Family Council' # Family Council
+    ec19b3fc-483a-435e-86e7-24cb2db31ccb: 'Family for Dinner/Dessert' # Family for Dinner/Dessert
+    edd0f160-8aac-4243-a581-43b3d66104f8: 'Date with Kid' # Date with Kid
+system:
+  edition: solo
+  live: true
+  name: 'Family Council'
+  schemaVersion: 5.8.0.3
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  require2fa: false
+  requireEmailVerification: true

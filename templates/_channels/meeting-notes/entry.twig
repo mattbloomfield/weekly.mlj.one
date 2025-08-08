@@ -1,0 +1,159 @@
+{# meeting-summary.twig - Extends base layout #}
+{% extends "_layouts/base.twig" %}
+
+{% block title %}Family Council - {{ entry.postDate|date('F j, Y') }}{% endblock %}
+
+{% block nav_info %}
+    <span class="text-blue-600">{{ entry.postDate|date('F j, Y') }}</span>
+{% endblock %}
+
+{% block content %}
+    <div class="space-y-8">
+        {# Meeting Header #}
+{#        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">#}
+{#            <div class="text-center ">#}
+{#                <h1 class="text-4xl font-bold text-blue-600 mb-2">Family Council Meeting</h1>#}
+{#                <p class="text-xl text-gray-600 italic">{{ entry.postDate|date('F j, Y') }}</p>#}
+{#            </div>#}
+{#        </div>#}
+
+        {# Family Members Section #}
+        <div class="space-y-6">
+{#            <h2 class="text-2xl font-bold text-gray-800 mb-4">Family Member Updates</h2>#}
+
+            {% for member in entry.goals %}
+                {% set memberResponsibilities = getPersonResponsibilities(member, entry.chores, entry.familyNight) %}
+                <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-4 hover:shadow-md transition-shadow">
+                    <h3 class="text-xl font-bold text-blue-600 border-b border-gray-200 pb-2 mb-2">{{ member.person }}</h3>
+
+                    <div class="grid gap-4 {% if memberResponsibilities.chore %}grid-cols-3{% else %}grid-cols-2{% endif %}">
+                        {# Goals Section #}
+                        {% if memberResponsibilities.goals %}
+                            <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
+                                <h4 class="flex items-center text-lg font-semibold text-green-800 mb-2">
+                                    <span class="text-lg mr-2">🎯</span>
+                                    Goals
+                                </h4>
+                                <div class="text-green-700 prose prose-sm">{{ memberResponsibilities.goals|replace('\n', '<br/>')|raw }}</div>
+                            </div>
+                        {% endif %}
+
+                        {# Family Night Role #}
+                        {% if memberResponsibilities.fhe %}
+                            <div class="bg-red-50 border-l-4 border-red-500 p-4 rounded-r-lg">
+                                <h4 class="flex items-center text-lg font-semibold text-red-800 mb-2">
+                                    <span class="text-lg mr-2">🎭</span>
+                                    FHE
+                                </h4>
+                                <div class="text-red-700 prose prose-sm">{{ memberResponsibilities.fhe }}</div>
+                            </div>
+                        {% endif %}
+
+                        {# Chores Section #}
+                        {% if memberResponsibilities.chore %}
+                            <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded-r-lg">
+                                <h4 class="flex items-center text-lg font-semibold text-yellow-800 mb-2">
+                                    <span class="text-lg mr-2">🧹</span>
+                                    Chores
+                                </h4>
+                                <div class="text-yellow-700 prose prose-sm">{{ memberResponsibilities.chore }}</div>
+                            </div>
+                        {% endif %}
+
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        {# Calendar Section #}
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Upcoming Events</h2>
+
+            {% set scheduledEvents = entry.scheduledEvents.all() %}
+            {% set scheduledEvents = scheduledEvents|sort((a, b) => a.date <=> b.date) %}
+            {# Display events if there are any #}
+            {% if scheduledEvents|length > 0 %}
+                <div class="space-y-4 grid grid-cols-3 gap-4">
+                    {% for event in scheduledEvents %}
+                        {% set date = event.date|date('Y-m-d') %}
+                        {% set time = event.date|date('g:i A') %}
+                        {# if time is midnight then remove it #}
+                        {% if time == '12:00 AM' %}
+                            {% set time = null %}
+                        {% endif %}
+                        {% set today = 'now'|date('Y-m-d') %}
+
+                        {# Only show events within the next week #}
+                        {% if date >= today %}
+                            <div >
+                                <div class="bg-white shadow-sm rounded-t-lg border border-gray-200 border-b-0">
+                                    <div class="p-2">
+                                        <h3 class="text-xs uppercase font-semibold text-gray-400 font-sans">{{ event.type.name }}</h3>
+                                    </div>
+                                </div>
+                                <div class="flex items-center bg-gray-50 hover:bg-gray-100 p-4 rounded-b-lg border border-gray-200 transition-colors">
+                                    <div class="flex-shrink-0 text-center mr-6">
+                                        <div class="bg-blue-600 text-white rounded-lg p-3 min-w-16">
+                                            <div class="text-2xl font-bold">{{ event.date|date('j') }}</div>
+                                            <div class="text-sm uppercase tracking-wide">{{ event.date|date('M') }}</div>
+                                            <div class="text-xs opacity-75">{{ event.date|date('D') }}</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow">
+                                        {% set eventTitle = event.title %}
+                                        {% if event.type.name == 'Temple' %}
+                                            {% set eventTitle = 'Temple Appointment' %}
+                                        {% endif %}
+                                        <h4 class="text-lg font-semibold text-gray-800 mb-1">{{ eventTitle }}</h4>
+                                        {% if time %}
+                                            <p class="flex items-center text-gray-600 mb-1">
+                                                <span class="mr-2">🕐</span>
+                                                {{ time }}
+                                            </p>
+                                        {% endif %}
+                                        {% if event.title is defined%}
+                                            <p class="text-gray-700 mt-2">{{ event.title }}</p>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% else %}
+                <div class="text-center py-12">
+                    <div class="text-gray-400 text-6xl mb-4">📅</div>
+                    <p class="text-gray-600 italic">No upcoming events scheduled for this week.</p>
+                </div>
+            {% endif %}
+        </div>
+
+        {# Action Items #}
+        {% if entry.actionItemsProjects|length > 0 %}
+            <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+                <div class="bg-purple-50 border-l-4 border-purple-500 p-4 rounded-r-lg">
+                    <h2 class="flex items-center text-2xl font-bold text-purple-800 mb-3">
+                        <span class="text-2xl mr-3">✅</span>
+                        Action Items
+                    </h2>
+                    {% for project in entry.actionItemsProjects %}
+                        <div class="text-purple-700 prose">{{ project.item }}</div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+
+        {# Prayer Requests #}
+        {% if entry.prayerRoll %}
+            <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+                <div class="bg-indigo-50 border-l-4 border-indigo-500 p-4 rounded-r-lg">
+                    <h2 class="flex items-center text-2xl font-bold text-indigo-800 mb-3">
+                        <span class="text-2xl mr-3">🙏</span>
+                        Prayer Requests
+                    </h2>
+                    <div class="text-indigo-700 prose">{{ include(template_from_string(entry.prayerRoll)|raw) }}</div>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

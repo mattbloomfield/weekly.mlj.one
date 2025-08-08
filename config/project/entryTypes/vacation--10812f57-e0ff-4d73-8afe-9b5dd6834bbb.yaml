@@ -1,0 +1,70 @@
+color: null
+description: null
+fieldLayouts:
+  2bcdb36b-6ac0-4810-adeb-a6a9de28abf5:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-07-14T04:45:11+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 91f247fe-4d3d-4c64-8ee4-b53e14fc01ec
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            dateAdded: '2025-07-14T04:47:20+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: dae18f9a-3013-4c95-bac0-83d04f8f154e # Date
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e8f4d037-14f4-4088-9e67-0461c1a81311
+            userCondition: null
+            warning: null
+            width: 50
+        name: Content
+        uid: d5a56d71-909c-479b-abb8-798f4ca14229
+        userCondition: null
+handle: vacation
+hasTitleField: true
+icon: cable-car
+name: Vacation
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

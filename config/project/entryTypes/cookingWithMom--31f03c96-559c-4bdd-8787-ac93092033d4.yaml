@@ -1,0 +1,53 @@
+color: null
+description: null
+fieldLayouts:
+  082cf75e-d6c1-4112-81a5-a6687a8cfe65:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-07-14T04:46:22+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 1b07266c-74a3-4596-8392-c9654c037536
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: cc6f43a0-7788-4a7a-9b30-2c1d10bd8ab3
+        userCondition: null
+handle: cookingWithMom
+hasTitleField: true
+icon: hat-chef
+name: 'Cooking with Mom'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

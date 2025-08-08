@@ -1,0 +1,70 @@
+color: null
+description: null
+fieldLayouts:
+  a9b2bae1-220e-47c7-9d14-cc2065a3aa77:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-07-14T04:45:50+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: 'Who?'
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 9ed3851f-ad45-42ba-beab-c74cfc7b3884
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            dateAdded: '2025-07-14T04:47:08+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: dae18f9a-3013-4c95-bac0-83d04f8f154e # Date
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 46f8c6e7-ab8e-4dc2-a08c-fa0c9fe54963
+            userCondition: null
+            warning: null
+            width: 50
+        name: Content
+        uid: 0375344a-9892-40cf-a284-85867cd01df7
+        userCondition: null
+handle: dateWithKid
+hasTitleField: true
+icon: ice-cream
+name: 'Date with Kid'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -1,0 +1,14 @@
+{% extends "_layouts/base.twig" %}
+
+{% block content %}
+<h2 class="text-2xl bold text-blue-900">All Meeting Notes</h2>
+    {% set entries = craft.entries().section('meetingNotes').all() %}
+
+    <ul class="mt-4">
+    {% for entry in entries %}
+        <li class="mt-4">
+            <a  href="{{ entry.url }}">{{ entry.postDate|date('F j, Y') }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,28 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 8c87c7ea-1582-42d5-b6d7-9c88e8c8a576 # Meeting Note
+handle: meetingNotes
+maxAuthors: 1
+name: 'Meeting Notes'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  af39758d-bdf6-4124-8383-9d645b8606da: # Family Council
+    enabledByDefault: true
+    hasUrls: true
+    template: _channels/meeting-notes/entry.twig
+    uriFormat: 'meeting-notes/{slug}'
+type: channel

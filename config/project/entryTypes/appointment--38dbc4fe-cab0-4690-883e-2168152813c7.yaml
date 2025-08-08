@@ -1,0 +1,70 @@
+color: null
+description: null
+fieldLayouts:
+  435cea52-fcff-49da-81da-dfd4f3100c2b:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-07-14T04:47:44+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 5efbaf3b-192f-4a25-81d4-a1a359fa996b
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            dateAdded: '2025-07-14T04:49:00+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: dae18f9a-3013-4c95-bac0-83d04f8f154e # Date
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 07ad2a31-acbd-490f-9b2f-52da108c7f97
+            userCondition: null
+            warning: null
+            width: 50
+        name: Content
+        uid: 508b8d84-4f08-4d96-b13d-205c7729db39
+        userCondition: null
+handle: appointment
+hasTitleField: true
+icon: calendar
+name: Appointment
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

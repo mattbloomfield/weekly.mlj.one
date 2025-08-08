@@ -1,0 +1,96 @@
+columnSuffix: null
+handle: familyNight
+instructions: null
+name: 'Family Night'
+searchable: false
+settings:
+  addRowLabel: 'Add a job'
+  columns:
+    __assoc__:
+      -
+        - col1
+        -
+          __assoc__:
+            -
+              - heading
+              - Responsibility
+            -
+              - handle
+              - responsibility
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+      -
+        - col2
+        -
+          __assoc__:
+            -
+              - heading
+              - 'Responsible Party'
+            -
+              - handle
+              - responsibleParty
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+  defaults:
+    -
+      __assoc__:
+        -
+          - col1
+          - Conduct
+        -
+          - col2
+          - ''
+    -
+      __assoc__:
+        -
+          - col1
+          - Music
+        -
+          - col2
+          - ''
+    -
+      __assoc__:
+        -
+          - col1
+          - Lesson
+        -
+          - col2
+          - ''
+    -
+      __assoc__:
+        -
+          - col1
+          - Activity
+        -
+          - col2
+          - ''
+    -
+      __assoc__:
+        -
+          - col1
+          - Treat
+        -
+          - col2
+          - ''
+    -
+      __assoc__:
+        -
+          - col1
+          - 'Article of Faith'
+        -
+          - col2
+          - ''
+  maxRows: null
+  minRows: null
+  staticRows: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Table

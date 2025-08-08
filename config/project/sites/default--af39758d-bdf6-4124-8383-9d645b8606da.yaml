@@ -1,0 +1,8 @@
+baseUrl: $PRIMARY_SITE_URL
+handle: default
+hasUrls: true
+language: en
+name: 'Family Council'
+primary: true
+siteGroup: ead71f15-16e6-4aae-b77a-0bd7dc9c28f6 # Family Council
+sortOrder: 1

@@ -1,0 +1,85 @@
+columnSuffix: null
+handle: scheduledEvents
+instructions: null
+name: 'Scheduled Events'
+searchable: false
+settings:
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  enableVersioning: false
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - c7013bca-3e29-4dc6-9e6a-2a4ece2f2f76 # Holiday
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 10812f57-e0ff-4d73-8afe-9b5dd6834bbb # Vacation
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - edd0f160-8aac-4243-a581-43b3d66104f8 # Date with Kid
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 31f03c96-559c-4bdd-8787-ac93092033d4 # Cooking with Mom
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - ec19b3fc-483a-435e-86e7-24cb2db31ccb # Family for Dinner/Dessert
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 38dbc4fe-cab0-4690-883e-2168152813c7 # Appointment
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - accbaccb-56e5-45c7-834b-e5eb0d801c47 # Temple
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 360126a8-85d8-4ef3-86da-01e0f5296f5d # Date
+        -
+          - group
+          - General
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

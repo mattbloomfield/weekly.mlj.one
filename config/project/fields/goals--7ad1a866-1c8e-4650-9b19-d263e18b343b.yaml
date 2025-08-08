@@ -1,0 +1,104 @@
+columnSuffix: null
+handle: goals
+instructions: null
+name: Goals
+searchable: false
+settings:
+  addRowLabel: 'Add a Person'
+  columns:
+    __assoc__:
+      -
+        - col7
+        -
+          __assoc__:
+            -
+              - heading
+              - Person
+            -
+              - handle
+              - person
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+      -
+        - col8
+        -
+          __assoc__:
+            -
+              - heading
+              - Goals
+            -
+              - handle
+              - goals
+            -
+              - width
+              - ''
+            -
+              - type
+              - multiline
+  defaults:
+    -
+      __assoc__:
+        -
+          - col7
+          - Matt
+        -
+          - col8
+          - ''
+    -
+      __assoc__:
+        -
+          - col7
+          - Jenni
+        -
+          - col8
+          - ''
+    -
+      __assoc__:
+        -
+          - col7
+          - Adam
+        -
+          - col8
+          - ''
+    -
+      __assoc__:
+        -
+          - col7
+          - Lark
+        -
+          - col8
+          - ''
+    -
+      __assoc__:
+        -
+          - col7
+          - Gordon
+        -
+          - col8
+          - ''
+    -
+      __assoc__:
+        -
+          - col7
+          - Todd
+        -
+          - col8
+          - ''
+    -
+      __assoc__:
+        -
+          - col7
+          - Naomi
+        -
+          - col8
+          - ''
+  maxRows: null
+  minRows: null
+  staticRows: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Table
