@@ -1,0 +1,34 @@
+#!/bin/bash
+
+## Description: Sync production database and assets to local DDEV
+
+set -e
+
+RED='\033[0;31m'
+YELLOW='\033[1;33m'
+BLUE='\033[1;34m'
+RESET='\033[0m'
+
+DB_NAME="family_council"
+DB_USER="familycouncil"
+DB_PASSWORD="qcb2AGA2yrw_wpk-fcb"
+REMOTE_HOST="mlj.one"
+REMOTE_DIR="/var/www/weekly.mlj.one/web"
+
+echo -e "${YELLOW}Exporting remote database...${RESET}"
+ssh matt@${REMOTE_HOST} "mysqldump -u ${DB_USER} -p'${DB_PASSWORD}' ${DB_NAME} > /tmp/weekly_sync.sql"
+
+echo -e "${YELLOW}Downloading database...${RESET}"
+scp matt@${REMOTE_HOST}:/tmp/weekly_sync.sql /tmp/weekly_sync.sql
+
+echo -e "${YELLOW}Importing to DDEV...${RESET}"
+ddev import-db --file=/tmp/weekly_sync.sql
+
+echo -e "${YELLOW}Cleaning up...${RESET}"
+ssh matt@${REMOTE_HOST} "rm /tmp/weekly_sync.sql"
+rm /tmp/weekly_sync.sql
+
+echo -e "${YELLOW}Syncing images...${RESET}"
+rsync -avz --progress matt@${REMOTE_HOST}:${REMOTE_DIR}/images/ ./web/images/
+
+echo -e "${BLUE}Sync complete!${RESET}"
