@@ -72,14 +72,22 @@ settings:
         -
           - group
           - General
+    -
+      __assoc__:
+        -
+          - uid
+          - e36d2d08-fd7b-4816-bef9-96bc694e91e6 # Activity Days
+        -
+          - group
+          - General
   includeTableView: false
   maxEntries: null
   minEntries: null
-  pageSize: null
+  pageSize: 50
   propagationKeyFormat: null
   propagationMethod: all
-  showCardsInGrid: false
-  viewMode: blocks
+  showCardsInGrid: true
+  viewMode: cards
 translationKeyFormat: null
 translationMethod: site
 type: craft\fields\Matrix

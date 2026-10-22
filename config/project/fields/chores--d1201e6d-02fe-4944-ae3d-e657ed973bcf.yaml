@@ -52,7 +52,7 @@ settings:
       __assoc__:
         -
           - col1
-          - 'Table & Bono'
+          - 'Living Room & Chickens'
         -
           - col2
           - ''
@@ -60,7 +60,7 @@ settings:
       __assoc__:
         -
           - col1
-          - 'Living Room & Chickens'
+          - 'Table & Bono'
         -
           - col2
           - ''
