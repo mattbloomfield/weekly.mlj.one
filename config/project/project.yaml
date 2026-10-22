@@ -1,4 +1,4 @@
-dateModified: 1755476647
+dateModified: 1792696937
 email:
   fromEmail: matthew.c.bloomfield@gmail.com
   fromName: 'Family Council'
@@ -30,7 +30,7 @@ system:
   edition: solo
   live: true
   name: 'Family Council'
-  schemaVersion: 5.8.0.3
+  schemaVersion: 5.11.0.2
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false

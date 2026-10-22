@@ -5,19 +5,13 @@ entryTypes:
     uid: 8c87c7ea-1582-42d5-b6d7-9c88e8c8a576 # Meeting Note
 handle: meetingNotes
 maxAuthors: 1
+minAuthors: 1
 name: 'Meeting Notes'
 previewTargets:
   -
-    __assoc__:
-      -
-        - label
-        - 'Primary entry page'
-      -
-        - urlFormat
-        - '{url}'
-      -
-        - refresh
-        - '1'
+    label: 'Primary entry page'
+    refresh: '1'
+    urlFormat: '{url}'
 propagationMethod: all
 siteSettings:
   af39758d-bdf6-4124-8383-9d645b8606da: # Family Council
